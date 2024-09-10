@@ -7,7 +7,7 @@ function ListTodos() {
   useEffect(() => {
     async function fetchTodos() {
       try {
-        const response = await axios.get("http://localhost:3000/todos");
+        const response = await axios.get("https://pern-todo-xgr7.onrender.com/todos");
         setTodos(response.data);
       } catch (error) {
         console.log(error.message);
@@ -17,7 +17,7 @@ function ListTodos() {
   });
   async function deleteTodo(id) {
     try {
-      const response = await axios.delete(`http://localhost:3000/todos/${id}`);
+      const response = await axios.delete(`https://pern-todo-xgr7.onrender.com/todos/${id}`);
       console.log(response);
       setTodos(todos.filter((todo)=> todo.todo_id !== id))
     } catch (error) {

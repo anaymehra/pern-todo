@@ -7,7 +7,7 @@ function EditTodos({ todo }) {
   async function editTodo(id,e) {
     e.preventDefault();
     try {
-        const response = await axios.put(`https://pern-todo-yw26.vercel.app/todos/${id}`,{
+        const response = await axios.put(`http://localhost:3000/todos/${id}`,{
             description:description
         })
     } catch (error) {

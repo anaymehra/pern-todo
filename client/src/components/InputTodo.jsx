@@ -7,7 +7,7 @@ function InputTodo() {
     async function onSubmitForm(e){
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/todos",{
+            const response = await axios.post("https://server-two-flax-81.vercel.app/todos",{
                 description:description
             }); // the data description is send to the backend and handled using req.body.description with the help of express.json middleware
             console.log(response)

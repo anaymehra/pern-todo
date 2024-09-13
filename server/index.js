@@ -12,7 +12,7 @@ const port = 3000;
 // and also we didnt really use body-parser(?) simply req.body and it wokred like a charm! 
 
 app.use(express.json());
-app.use(cors())
+app.use(cors({ origin: 'https://pern-todo-two.vercel.app/' }))
 db.connect();
 
 
